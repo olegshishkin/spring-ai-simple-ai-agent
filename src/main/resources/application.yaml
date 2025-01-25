@@ -3,10 +3,12 @@ spring:
     ollama:
       base-url: http://localhost:11434
       chat:
+        enabled: false
         options:
           model: llama3.1
     mistralai:
       chat:
+        enabled: true
         options:
           model: mistral-large-latest
 logging:
