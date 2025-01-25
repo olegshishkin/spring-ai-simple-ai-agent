@@ -15,8 +15,8 @@ public class MyTools {
     @Description("Этот метод вызывает эндпоинт для расчета площади комнаты")
     public Function<GetSquareRq, Double> getSquare() {
         return rq -> {
-            log.info("Площадь комнаты для {} * {}", rq.width, rq.height);
-            return rq.width * rq.height;
+            log.info("Площадь комнаты для {} * {}", rq.width, rq.length);
+            return rq.width * rq.length;
         };
     }
 
@@ -66,7 +66,7 @@ public class MyTools {
     }
 
     public record GetSquareRq(@Description("Ширина комнаты") Double width,
-                              @Description("Длина комнаты") Double height) {
+                              @Description("Длина комнаты") Double length) {
 
     }
 
