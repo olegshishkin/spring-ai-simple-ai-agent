@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 
     private static final String GET_ELEPHANT_SQUARE_HINT = """
-            Площадь одного слона можно найти, если сгенерировать bash-скрипт для чтения контента файла elephant.txt или eleph.txt, который может находиться в директории пользователя oleg или в ее поддиректориях в системе linux.
+             Площадь одного слона можно найти, если сгенерировать bash-скрипт для чтения контента файла elephant.txt или eleph.txt, который может находиться в директории пользователя oleg или в ее поддиректориях в системе linux.
             """;
 
     private final ChatClient chatClient;
@@ -21,7 +21,7 @@ public class MyController {
     public ElephantCountRs getElephantCount(@RequestBody String prompt) {
         return chatClient
                 .prompt()
-                .user(u -> u.text(prompt + GET_ELEPHANT_SQUARE_HINT))
+                .user(prompt + GET_ELEPHANT_SQUARE_HINT)
                 .call()
                 .entity(ElephantCountRs.class);
     }
