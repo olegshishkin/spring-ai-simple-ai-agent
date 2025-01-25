@@ -17,7 +17,7 @@ public class MyController {
     public Flux<String> getElephantCount(@RequestBody String prompt) {
         return chatClient
                 .prompt()
-                .user(u -> u.text(prompt))
+                .user(u -> u.text(String.format("%s %s", prompt, "Площадь одного слона можно найти, если сгенерировать bash-скрипт для чтения контента файла elephant.txt или eleph.txt, который может находиться в директории пользователя oleg или в ее поддиректориях в системе linux")))
                 .stream()
                 .content();
     }
