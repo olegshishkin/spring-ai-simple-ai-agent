@@ -3,6 +3,8 @@ package org.github.olegshishkin.agent;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import lombok.extern.slf4j.Slf4j;
+import org.github.olegshishkin.agent.compaction.AnimalCompaction;
+import org.github.olegshishkin.agent.compaction.AnimalCompactionService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
@@ -65,6 +67,27 @@ public class MyTools {
         };
     }
 
+    @Bean
+    @Description("Метод возвращает компактность животных - способность уплотниться, чтобы больше поместилось в ограниченном пространстве")
+    public Function<AnimalCompactionRq, AnimalCompaction> getAnimalCompaction(
+            AnimalCompactionService animalCompactionService) {
+        return rq -> {
+            log.info("Компактность животного: {}", rq);
+            var compaction = animalCompactionService.getCompaction(rq.name, rq.continent);
+            log.info("Компактность животного для {}: {}", rq, compaction);
+            return compaction;
+        };
+    }
+
+    @Bean
+    @Description("Ареал обитания слонов")
+    public Supplier<String> getArea() {
+        return () -> {
+            log.info("Ареал обитания");
+            return "Африка";
+        };
+    }
+
     public record GetSquareRq(@Description("Ширина комнаты") Double width,
                               @Description("Длина комнаты") Double length) {
 
@@ -72,6 +95,11 @@ public class MyTools {
 
     public record GetElephantSizeRq(@Description("Имя файла") String fileName,
                                     @Description("Контент shell-скрипта для поиска файла") String script) {
+
+    }
+
+    public record AnimalCompactionRq(@Description("Континент обитания животного") String continent,
+                                     @Description("Наименование животного") String name) {
 
     }
 }

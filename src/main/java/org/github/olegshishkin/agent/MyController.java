@@ -1,8 +1,10 @@
 package org.github.olegshishkin.agent;
 
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.context.annotation.Description;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,12 +20,13 @@ public class MyController {
     private final ChatClient chatClient;
 
     @PostMapping("/assist")
-    public ElephantCountRs getElephantCount(@RequestBody String prompt) {
+    public List<ElephantCountRs> getElephantCount(@RequestBody String prompt) {
         return chatClient
                 .prompt()
                 .user(prompt + GET_ELEPHANT_SQUARE_HINT)
                 .call()
-                .entity(ElephantCountRs.class);
+                .entity(new ParameterizedTypeReference<>() {
+                });
     }
 
     public record ElephantCountRs(

@@ -1,4 +1,7 @@
 spring:
+  output:
+    ansi:
+      enabled: ALWAYS
   ai:
     ollama:
       base-url: http://localhost:11434

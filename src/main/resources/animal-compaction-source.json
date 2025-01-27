@@ -1,28 +1,184 @@
 [
-{"id": 1, "area": "Африка", "name": "Лев", "color": "желтый", "compaction": "1,1"},
-{"id": 2, "area": "Евразия", "name": "Медведь", "color": "черный", "compaction": "1,2"},
-{"id": 3, "area": "Австралия", "name": "Кенгуру", "color": "желтый", "compaction": "2,1"},
-{"id": 4, "area": "Антарктида", "name": "Пингвин", "color": "черный", "compaction": "10"},
-{"id": 5, "area": "Евразия", "name": "Волк", "color": "серый", "compaction": "2"},
-{"id": 6, "area": "Африка", "name": "Слон", "color": "серый", "compaction": "10"},
-{"id": 7, "area": "Австралия", "name": "Паук", "color": "красный", "compaction": "0,1"},
-{"id": 8, "area": "Евразия", "name": "Лиса", "color": "оранжевый", "compaction": "8"},
-{"id": 9, "area": "Евразия", "name": "Мышь", "color": "серый", "compaction": "11"},
-{"id":10, "area": "Африка", "name": "Зебра", "color": "черный", "compaction": "6"},
-{"id":11, "area": "Австралия", "name": "Лягушка", "color": "желтый", "compaction": "8,8"},
-{"id":12, "area": "Евразия", "name": "Заяц", "color": "серый", "compaction": "2"},
-{"id":13, "area": "Африка", "name": "Бегемот", "color": "серый", "compaction": "90"},
-{"id":14, "area": "Евразия", "name": "Лось", "color": "коричневый", "compaction": "120"},
-{"id":15, "area": "Австралия", "name": "Страус", "color": "белый", "compaction": "1"},
-{"id":16, "area": "Австралия", "name": "Змея", "color": "желтый", "compaction": "1,4"},
-{"id":17, "area": "Африка", "name": "Фламинго", "color": "розовый", "compaction": "1"},
-{"id":18, "area": "Евразия", "name": "Манул", "color": "серый", "compaction": "1,5"},
-{"id":19, "area": "Австралия", "name": "Собака", "color": "оранжевый", "compaction": "1,7"},
-{"id":20, "area": "Евразия", "name": "Панда", "color": "черный", "compaction": "1,75"},
-{"id":21, "area": "Африка", "name": "Крокодил", "color": "зеленый", "compaction": "8,1"},
-{"id":22, "area": "Австралия", "name": "Варан", "color": "желтый", "compaction": "4,1"},
-{"id":23, "area": "Южная Америка", "name": "Пиранья", "color": "белый", "compaction": "4,4"},
-{"id":24, "area": "Евразия", "name": "Тигр", "color": "желтый", "compaction": "19"},
-{"id":25, "area": "Австралия", "name": "Акула", "color": "серый", "compaction": "0,081"},
-{"id":26, "area": "Африка", "name": "Обезьяна", "color": "коричневый", "compaction": "1"}
+  {
+    "id": 1,
+    "continent": "Африка",
+    "name": "Лев",
+    "color": "желтый",
+    "compaction": "1,1"
+  },
+  {
+    "id": 2,
+    "continent": "Евразия",
+    "name": "Медведь",
+    "color": "черный",
+    "compaction": "1,2"
+  },
+  {
+    "id": 3,
+    "continent": "Австралия",
+    "name": "Кенгуру",
+    "color": "желтый",
+    "compaction": "2,1"
+  },
+  {
+    "id": 4,
+    "continent": "Антарктида",
+    "name": "Пингвин",
+    "color": "черный",
+    "compaction": "10"
+  },
+  {
+    "id": 5,
+    "continent": "Северная Америка",
+    "name": "Волк",
+    "color": "серый",
+    "compaction": "2"
+  },
+  {
+    "id": 6,
+    "continent": "Африка",
+    "name": "Слон",
+    "color": "серый",
+    "compaction": "10"
+  },
+  {
+    "id": 7,
+    "continent": "Австралия",
+    "name": "Паук",
+    "color": "красный",
+    "compaction": "0,1"
+  },
+  {
+    "id": 8,
+    "continent": "Евразия",
+    "name": "Лиса",
+    "color": "оранжевый",
+    "compaction": "8"
+  },
+  {
+    "id": 9,
+    "continent": "Северная Америка",
+    "name": "Слон",
+    "color": "красный",
+    "compaction": "11"
+  },
+  {
+    "id": 10,
+    "continent": "Африка",
+    "name": "Зебра",
+    "color": "черный",
+    "compaction": "6"
+  },
+  {
+    "id": 11,
+    "continent": "Австралия",
+    "name": "Лягушка",
+    "color": "желтый",
+    "compaction": "8,8"
+  },
+  {
+    "id": 12,
+    "continent": "Евразия",
+    "name": "Заяц",
+    "color": "серый",
+    "compaction": "2"
+  },
+  {
+    "id": 13,
+    "continent": "Африка",
+    "name": "Бегемот",
+    "color": "серый",
+    "compaction": "90"
+  },
+  {
+    "id": 14,
+    "continent": "Евразия",
+    "name": "Лось",
+    "color": "коричневый",
+    "compaction": "120"
+  },
+  {
+    "id": 15,
+    "continent": "Австралия",
+    "name": "Страус",
+    "color": "белый",
+    "compaction": "1"
+  },
+  {
+    "id": 16,
+    "continent": "Южная Америка",
+    "name": "Змея",
+    "color": "желтый",
+    "compaction": "1,4"
+  },
+  {
+    "id": 17,
+    "continent": "Африка",
+    "name": "Фламинго",
+    "color": "розовый",
+    "compaction": "1"
+  },
+  {
+    "id": 18,
+    "continent": "Евразия",
+    "name": "Манул",
+    "color": "серый",
+    "compaction": "1,5"
+  },
+  {
+    "id": 19,
+    "continent": "Австралия",
+    "name": "Слон",
+    "color": "оранжевый",
+    "compaction": "1,7"
+  },
+  {
+    "id": 20,
+    "continent": "Евразия",
+    "name": "Панда",
+    "color": "черный",
+    "compaction": "1,75"
+  },
+  {
+    "id": 21,
+    "continent": "Африка",
+    "name": "Крокодил",
+    "color": "зеленый",
+    "compaction": "8,1"
+  },
+  {
+    "id": 22,
+    "continent": "Австралия",
+    "name": "Варан",
+    "color": "желтый",
+    "compaction": "4,1"
+  },
+  {
+    "id": 23,
+    "continent": "Южная Америка",
+    "name": "Слон",
+    "color": "белый",
+    "compaction": "4,4"
+  },
+  {
+    "id": 24,
+    "continent": "Евразия",
+    "name": "Тигр",
+    "color": "желтый",
+    "compaction": "19"
+  },
+  {
+    "id": 25,
+    "continent": "Антарктида",
+    "name": "Слон",
+    "color": "желтый",
+    "compaction": "0,081"
+  },
+  {
+    "id": 26,
+    "continent": "Африка",
+    "name": "Обезьяна",
+    "color": "коричневый",
+    "compaction": "1"
+  }
 ]
