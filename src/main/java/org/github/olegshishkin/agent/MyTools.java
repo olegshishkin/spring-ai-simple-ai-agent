@@ -80,10 +80,10 @@ public class MyTools {
     }
 
     @Bean
-    @Description("Ареал обитания слонов")
+    @Description("Континент обитания слонов")
     public Supplier<String> getArea() {
         return () -> {
-            log.info("Ареал обитания");
+            log.info("Континент обитания");
             return "Африка";
         };
     }
