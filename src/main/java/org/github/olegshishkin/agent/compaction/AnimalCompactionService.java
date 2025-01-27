@@ -56,14 +56,13 @@ public class AnimalCompactionService {
     }
 
     @SneakyThrows
-    public AnimalCompaction getCompaction(String name, String continent) {
-        var compactionTemplate = new AnimalCompaction(null, continent, name, null, null);
+    public AnimalCompaction getCompaction(AnimalCompaction compaction) {
 
         // Формируем объект запроса в векторное хранилище.
         var rq = SearchRequest.builder()
                 .topK(1) // ищем один ближайший
                 .similarityThresholdAll()
-                .query(objectMapper.writeValueAsString(compactionTemplate))
+                .query(objectMapper.writeValueAsString(compaction))
                 .build();
 
         // Семантический поиск в векторном хранилище.

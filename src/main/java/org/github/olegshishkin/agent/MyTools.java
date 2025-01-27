@@ -69,11 +69,11 @@ public class MyTools {
 
     @Bean
     @Description("Метод возвращает компактность животных - способность уплотниться, чтобы больше поместилось в ограниченном пространстве")
-    public Function<AnimalCompactionRq, AnimalCompaction> getAnimalCompaction(
+    public Function<AnimalCompaction, AnimalCompaction> getAnimalCompaction(
             AnimalCompactionService animalCompactionService) {
         return rq -> {
             log.info("Компактность животного: {}", rq);
-            var compaction = animalCompactionService.getCompaction(rq.name, rq.continent);
+            var compaction = animalCompactionService.getCompaction(rq);
             log.info("Компактность животного для {}: {}", rq, compaction);
             return compaction;
         };
@@ -95,11 +95,6 @@ public class MyTools {
 
     public record GetElephantSizeRq(@Description("Имя файла") String fileName,
                                     @Description("Контент shell-скрипта для поиска файла") String script) {
-
-    }
-
-    public record AnimalCompactionRq(@Description("Континент обитания животного") String continent,
-                                     @Description("Наименование животного") String name) {
 
     }
 }

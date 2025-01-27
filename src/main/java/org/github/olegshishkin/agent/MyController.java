@@ -20,13 +20,13 @@ public class MyController {
     private final ChatClient chatClient;
 
     @PostMapping("/assist")
-    public List<ElephantCountRs> getElephantCount(@RequestBody String prompt) {
+    public ElephantCountRs getElephantCount(@RequestBody String prompt) {
         return chatClient
                 .prompt()
                 .user(prompt + GET_ELEPHANT_SQUARE_HINT)
                 .call()
-                .entity(new ParameterizedTypeReference<>() {
-                });
+                .entity(new ParameterizedTypeReference<List<ElephantCountRs>>() {})
+                .getFirst();
     }
 
     public record ElephantCountRs(
